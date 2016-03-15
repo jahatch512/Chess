@@ -1,0 +1,36 @@
+
+
+class Game
+
+class Board
+  # hold a 2d array
+  # (fill with class EmptyPiece)
+  # def move(start_square, end_square) --> update grid
+  # raise an exception if there is no piece at start
+  # raise an exception if the piece cannot move to end_square
+
+  # Later:   #in_check?(color)
+
+class Display
+  # require colorize
+  # create a cursor
+  # @cursor remembers cursor coordinates
+  # selected is a yes/no for whether the cursor has selected a piece
+
+class Piece
+
+  # moves
+  # mode_dirs
+
+  # checkmate?
+  #valid_moves
+
+  class King < Piece (stepping)
+  class Queen < Piece (sliding)
+  class Knight < Piece (stepping)
+  class Rook < Piece (sliding)
+  class Bishop < Piece (sliding)
+  class Pawn < Piece (pawn)
+  class EmptyPiece
+
+class HumanPlayer
