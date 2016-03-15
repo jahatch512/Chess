@@ -9,15 +9,15 @@ class EmptySquare
   def initialize(board, coordinates)
     @board = board
     @coordinates = coordinates
-    @null_piece = "   [   ]   "
+    @icon = "             "
   end
 
   def inspect
-    @null_piece
+    @icon
   end
 
   def to_s
-    @null_piece
+    @icon
   end
 
 end

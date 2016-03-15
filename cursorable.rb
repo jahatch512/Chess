@@ -43,6 +43,7 @@ module Cursorable
       exit 0
     when :return, :space
       @cursor_pos
+      # @selected_pos = @cursor_pos
     when :left, :right, :up, :down
       update_pos(MOVES[key])
       nil
@@ -62,7 +63,7 @@ module Cursorable
     end
   ensure
     STDIN.echo = true
-    STDIN.cooked!
+    STDIN.cooked! # I just deleted "A"
 
     return input
   end

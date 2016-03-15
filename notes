@@ -1,4 +1,22 @@
+# all pieces
+--> move from start_square to end_square
+--> delete other pieces
+--> can get deleted by other pieces
+--> can thrust the King into check
 
+#all slideable pieces
+--> can move however far they like in one direction until hitting another piece
+------> can delete that piece if it is the opponent
+
+#all linear pieces
+---> can move from left to right and up to down
+
+#all diagonal pieces
+---> can move diagonally in either direction
+
+#
+
+--------------------------------
 
 class Game
 
@@ -10,6 +28,7 @@ class Board
   # raise an exception if the piece cannot move to end_square
 
   # Later:   #in_check?(color)
+  # Later: #deepdup
 
 class Display
   # require colorize
