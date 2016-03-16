@@ -1,5 +1,5 @@
 require 'colorize'
-
+require 'byebug'
 class Piece
   include Cursorable
 
@@ -15,12 +15,20 @@ class Piece
   #
   # def move
   # end
+
   #
   # def moves
+  #
   # end
 
   def valid_moves
-    # moves.reject {|move| move_into_check?(move)}
+    moves.reject {|move| move_into_check?(move)}
+  end
+
+  def move_into_check?(ending_square)
+    test_board = board.duping
+    test_board.move_piece(pos, ending_square)
+    test_board.in_check?(color)
   end
 
   def to_s

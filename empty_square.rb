@@ -4,12 +4,12 @@
 
 class EmptySquare
 
-  attr_reader :coordinates
+  attr_accessor :pos
 
-  def initialize(board, coordinates)
+  def initialize(board, pos)
     @board = board
-    @coordinates = coordinates
-    @icon = "             "
+    @pos = pos
+    @icon = "   "
   end
 
   def inspect

@@ -24,6 +24,7 @@ module SlidingPiece
     DIAGONAL_DIRS
   end
 
+
   def moves
     moves = []
     move_dirs.each do |dx, dy|

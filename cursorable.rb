@@ -1,5 +1,6 @@
 
 require "io/console"
+require 'byebug'
 
 module Cursorable
   KEYMAP = {
@@ -42,6 +43,7 @@ module Cursorable
     when :ctrl_c
       exit 0
     when :return, :space
+      @selected_pos = @cursor_pos
       @cursor_pos
       # @selected_pos = @cursor_pos
     when :left, :right, :up, :down

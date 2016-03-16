@@ -3,7 +3,7 @@ class Bishop < Piece
 include SlidingPiece
 
   def to_s
-    "      \u262D      "
+    " \u262D "
   end
 
   def move_dirs

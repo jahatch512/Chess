@@ -4,7 +4,7 @@ class Pawn < Piece
 
   def to_s
     # "\u2659" if color == :black
-    "      \u2708      "
+    " \u2708 "
   end
 
   def general_moves

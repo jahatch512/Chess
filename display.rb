@@ -10,7 +10,7 @@ class Display
 
   def initialize(board)
     @board = board
-    @cursor_pos = [0, 4] #change back to [0, 0]
+    @cursor_pos = [0, 0] #change back to [0, 0]
     @selected = false
   end
 
@@ -35,11 +35,11 @@ class Display
     if [i, j] == @cursor_pos
       bg = :light_red
     # elsif [i, j] == @selected_pos
-    #   bg = :purple
-  elsif (board[*@cursor_pos].class == Queen ||
-      board[*@cursor_pos].class == Bishop) &&
-       board[*@cursor_pos].moves.include?([i, j])
+    #   bg = :yellow
+    elsif board[*@cursor_pos].class != EmptySquare && board[*@cursor_pos].moves.include?([i, j])
       bg = :green
+    elsif @selected_pos && board[*@selected_pos].class != EmptySquare && board[*@selected_pos].moves.include?([i, j])
+        bg = :yellow
     elsif (i + j).odd?
       bg = :light_blue
     else
@@ -50,7 +50,7 @@ class Display
 
   def render
     system("clear")
-    puts "Fill the grid!"
+    # puts "Fill the grid. #{@current_player.name}!"
     # puts "This is what we are looking for #{board.empty?([1,1])}"
     puts "Arrow keys, WASD, or vim to move, space or enter to confirm."
     build_grid.each { |row| puts row.join }

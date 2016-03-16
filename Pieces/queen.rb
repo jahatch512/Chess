@@ -5,7 +5,7 @@ class Queen < Piece
   include SlidingPiece
 
   def to_s
-    "      \u262F      "
+    " \u262F "
   end
 
   def move_dirs
